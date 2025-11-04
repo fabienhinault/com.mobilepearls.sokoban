@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.mobilepearls.sokoban"
+        minSdk 15
+        targetSdk 35
+
+        versionCode 14
+        versionName "1.14"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // Si vous migrez vers AndroidX, décommentez et ajustez les dépendances.
+    // implementation 'androidx.appcompat:appcompat:1.6.1'
+    // implementation 'androidx.core:core-ktx:1.9.0'
+}
